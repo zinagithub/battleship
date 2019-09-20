@@ -1,22 +1,21 @@
 const Ship = (length) => {
   let health = length;
   let positions = [];
+  let getPositions = () => positions;
 
   const setPositions = ( posArr ) => {
-    positions = posArr.map( ( elm ) => {
-        return {cell : elm, hit : 0 };
-    });
-    return positions;
+    positions = posArr.map( ( elm ) => { 
+      return {x : elm[0], y : elm[1], hit : 0 };
+    });	  	
   }
 
-  const hit = (cell) => {
-    for (var i = 0; i < positions.length; i++) {
-      if (positions[i].cell == cell) {
-        positions[i].hit = 1;   
-      }     
+  const hit = (ligne, col) => {
+    let pos = positions.findIndex(pos => pos.x === ligne && pos.y === col);
+    if (pos != -1){
+      positions[pos].hit = 1;
     }
-    return positions;
-  }
+       
+  } 
 
   const isSunk = () => {
     let nbrHit = 0;
@@ -31,6 +30,6 @@ const Ship = (length) => {
     return false;
   } 
 
-  return {health, hit, isSunk, positions, setPositions}
+  return {health, hit, isSunk, getPositions, setPositions,positions}
 }
 module.exports = Ship;
