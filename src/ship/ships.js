@@ -2,7 +2,7 @@ const Ship = (length) => {
   let health = length;
   let positions = [];
   let getPositions = () => positions;
-
+  
   const setPositions = ( posArr ) => {
     positions = posArr.map( ( elm ) => { 
       return {x : elm[0], y : elm[1], hit : 0 };
