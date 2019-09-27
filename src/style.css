@@ -9,8 +9,70 @@ html {
   position: relative;
   border-radius: 10px;
   width: 1200px;
-  height: 390px;
+  height: 550px;
   margin: 10% auto;
   padding: 40px 0 0;
 }
+.board  {
+	display : flex;
+}
+#board1-container {
+  width: 420px;
+  height: 420px;
+  background: rgba(40,40,40,1)
+    -webkit-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
+  background: rgba(40,40,40,1)
+    -moz-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
+  background: rgba(40,40,40,1)
+    -ms-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
+  background: rgba(40,40,40,1)
+    radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
+  background-size: cover;
+  position: relative;
+  position: relative;
+  left : 50px;
+  overflow: hidden;
 
+}
+#board2-container {
+  width: 420px;
+  height: 420px;
+  background: rgba(40,40,40,1)
+    -webkit-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
+  background: rgba(40,40,40,1)
+    -moz-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
+  background: rgba(40,40,40,1)
+    -ms-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
+  background: rgba(40,40,40,1)
+    radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
+  background-size: cover;
+  position: relative;
+  position: relative;
+  left : 315px;
+  overflow: hidden;
+}
+
+.sqr {
+	border: 1px solid #DDD;
+	width : 40px;
+	height: 40px;
+	font-size: 80px;
+	float : left;
+}
+.classButtons{
+	position : absolute;
+	width : 260px;
+	height: 420px;
+	/*background: yellow;*/
+	top : 40px;
+	left : 470px;
+}
+#buttonStart{
+	width :200px;
+	height: 50px;
+	background: rgba(40,40,40,1);
+	color : white;
+	margin : 0 auto;
+	position : relative;
+	left : 30px;
+}
