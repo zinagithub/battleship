@@ -58,7 +58,7 @@ function startBattle(){
     let shipx = ship(elm.length);
         humainBoard.placeShip(shipx, elm);
     });
-    let humain = new Player('humain', humainBoard);
+    let humain = new Player('Humain', humainBoard);
     console.log(humainBoard);
     let computerBoard = new board();
     computerPosShips.map((elm) =>{
@@ -69,6 +69,7 @@ function startBattle(){
 
     let newGame  = new Game(humain, computer);
     newGame.startGame();
+    
 }
 
 drawGrids();
