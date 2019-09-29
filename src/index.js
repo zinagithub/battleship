@@ -19,6 +19,7 @@ function drawGrids(){
 
             let div2 = document.createElement("div");
             div2.classList.add("sqr");
+            div1.style.border = '1px solid #DDD;'
             div2.id = `board2${i}${j}`;
             computerGrid.appendChild(div2);
 		}
