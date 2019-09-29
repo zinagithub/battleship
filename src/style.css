@@ -1,6 +1,5 @@
 body,
-html {
-  box-sizing: border-box;	
+html {	
   height: 100%;	
   width: 100%; 
 }
@@ -15,7 +14,6 @@ header {
 }
 .msgClass {
 	background: pink;
-	height: 25px;
 	margin : 0 auto;
 	padding: 20px;
 	text-align: center;
@@ -32,15 +30,7 @@ header {
 }
 
 .board1, .board2 {
-  background: gray
-  radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
-  background: gray
-    -webkit-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
-  background: gray
-    -moz-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
-  background: gray
-    -ms-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
-  
+  background: rgba(40,80,60,1);
   background-size: cover;
   overflow: hidden;
   position: relative;	
@@ -76,7 +66,7 @@ header {
 	left : 30px;
 	margin : 0 auto;
 	opacity: 1;
-	position : relative;
-	height: 50px;
+	padding: 15px;
+	position : relative;	
 	width :200px;
 }

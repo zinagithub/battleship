@@ -10,10 +10,10 @@ export default function Player(name, board) {
         while (cond){
           line = Math.floor(Math.random() * Math.floor(9));
           col  = Math.floor(Math.random() * Math.floor(9));
-          if (this.playAIPos.indexOf([line, col]) == -1){
+          if (this.playAIPos.indexOf([line, col]) === -1){
             this.playAIPos.push([line, col]);
             cond = false;
-            //console.log('AIpos:', this.playAIPos);
+            console.log('AIpos:', this.playAIPos);
             return [line, col];
           }
         }	
