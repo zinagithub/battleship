@@ -1,5 +1,6 @@
 body,
 html {
+  box-sizing: border-box;	
   height: 100%;	
   width: 100%; 
 }
@@ -70,11 +71,12 @@ header {
 	width : 260px;
 }
 .replay, .start {
-	background: rgba(40,40,40,1);
+	background: rgba(40,80,60,1);
 	color : white;
 	left : 30px;
+	margin : 0 auto;
+	opacity: 1;
 	position : relative;
 	height: 50px;
-	margin : 0 auto;
 	width :200px;
 }
