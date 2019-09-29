@@ -84,7 +84,7 @@ it('should return true if all ships are sunk ', () => {
    expect(gameBoard.allShipsSunk()).toBeTruthy()  
 });
 it('should return false if all ships are not sunk ', () => {
-  const gameBoard = new board();
+   const gameBoard = new board();
    const ship1 = ship(1);
    let pos = [[0,0]];
    gameBoard.placeShip(ship1, pos); 
