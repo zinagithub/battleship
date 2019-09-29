@@ -13,7 +13,7 @@ export default function Player(name, board) {
           if (this.playAIPos.indexOf([line, col]) == -1){
             this.playAIPos.push([line, col]);
             cond = false;
-            console.log('AIpos:', this.playAIPos);
+            //console.log('AIpos:', this.playAIPos);
             return [line, col];
           }
         }	

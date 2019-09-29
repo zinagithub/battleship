@@ -60,7 +60,7 @@ export default function Game(player1, player2){
 
 
 function displayMsg(message, turn){
-    const msg = document.getElementById('message');
+    const msg = document.getElementById('messag');
     msg.innerHTML = message;
     let grid1 = document.querySelector("#board1-container");
     let grid2 = document.querySelector("#board2-container");

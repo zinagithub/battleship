@@ -28,11 +28,12 @@ function drawGrids(){
 
 function listenEvents(){
    const startEvent = document.getElementById('buttonStart');
-   startEvent.addEventListener('click',startBattle)
+   startEvent.addEventListener('click',startBattle);
+
 }
 
 function placeGridShips(){
-  
+  drawGrids();
   for (let i=0; i<humainPosShips.length; i++){
      let ships = humainPosShips[i];
      ships.map((elm) => {	
@@ -40,16 +41,6 @@ function placeGridShips(){
       info.style.backgroundColor = "green";
 	});
   }	
-  
-
-  
-  /*for (let i=0; i<computerPosShips.length; i++){
-     let ships = computerPosShips[i];
-     ships.map((elm) => {	
-      let info = document.getElementById('board2'+elm[0].toString()+elm[1].toString());
-      info.style.backgroundColor = "green";
-	});
-  } */ 
 }
 
 function startBattle(){
@@ -68,9 +59,12 @@ function startBattle(){
 
     let newGame  = new Game(humain, computer);
     newGame.startGame();
+    const startEvent = document.getElementById('buttonStart');
+    startEvent.removeEventListener('click',startBattle);
     
 }
 
 drawGrids();
 placeGridShips();
 listenEvents();
+

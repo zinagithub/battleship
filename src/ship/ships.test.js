@@ -2,12 +2,8 @@ const ship = require('./ships');
 //import Ship from '../src/ship';
 
 describe('Ship factory', () => {
-  it('should create an object ', () => {
-    //expect(ship(1)).toEqual( {"health": 1, "hit": [Function hit]});
-  });
-
   it('should create an non positioned ship with the dimension specified', () => {
-    let ship1 = ship(1);
+     let ship1 = ship(1);
      expect(ship1.health).toBe(1);
      expect(ship1.getPositions()).toEqual([])
   });
