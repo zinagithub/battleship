@@ -15,9 +15,10 @@ header {
 .msgClass {
 	background: pink;
 	margin : 0 auto;
-	padding: 20px;
+	/*padding: 15px;*/
 	text-align: center;
-	width : 400px;
+	height: 80px;
+	width : 450px;
 }
 .container1 {
   height: 550px;
@@ -30,6 +31,7 @@ header {
 }
 
 .board1, .board2 {
+  background: rgb(40,80,60);
   background: rgba(40,80,60,1);
   background-size: cover;
   overflow: hidden;
@@ -61,12 +63,14 @@ header {
 	width : 260px;
 }
 .replay, .start {
-	background: rgba(40,80,60,1);
+	background: rgb(40,80,60);
+    background: rgba(40,80,60,1);
 	color : white;
+	height: 50px;
 	left : 30px;
 	margin : 0 auto;
 	opacity: 1;
-	padding: 15px;
+	/*padding: 15px;*/
 	position : relative;	
 	width :200px;
 }
