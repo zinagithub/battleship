@@ -31,13 +31,13 @@ header {
 }
 
 .board1, .board2 {
-  background: rgba(40,40,40,1) 
-    radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
-  background: rgba(40,40,40,1)
+  background: gray
+  radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
+  background: gray
     -webkit-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
-  background: rgba(40,40,40,1)
+  background: gray
     -moz-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
-  background: rgba(40,40,40,1)
+  background: gray
     -ms-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
   
   background-size: cover;
@@ -57,8 +57,8 @@ header {
 
 .sqr {
 	border: 1px solid #DDD;
-	font-size: 50px;
 	float : left;
+	font-size: 50px;
 	height: 30px;
 	width : 30px;	
 }
@@ -69,7 +69,7 @@ header {
 	top : 40px;
 	width : 260px;
 }
-.start, .replay{
+.replay, .start {
 	background: rgba(40,40,40,1);
 	color : white;
 	left : 30px;
