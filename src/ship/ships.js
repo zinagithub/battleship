@@ -4,15 +4,16 @@ const Ship = (length) => {
   let getPositions = () => positions;
   
   const setPositions = ( posArr ) => {
-    positions = posArr.map( ( elm ) => { 
-      return {x : elm[0], y : elm[1], hit : 0 };
-    });	  	
+    posArr.map( ( elm ) => { 
+     positions.push({x : elm[0], y : elm[1], hit : 0 });
+    });	
+    return positions; 	
   }
 
   const hit = (ligne, col) => {
-    let pos = positions.findIndex(pos => pos.x === ligne && pos.y === col);
-    if (pos != -1){
-      positions[pos].hit = 1;
+    let posi = positions.findIndex(elm => elm.x == ligne && elm.y == col);
+    if (posi != -1){
+      positions[posi].hit = 1;
     }
        
   } 

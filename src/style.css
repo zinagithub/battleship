@@ -3,22 +3,39 @@ html {
   height: 100%;	
   width: 100%; 
 }
+.container {
+	margin : 0 auto;
+	width: 80%;
+}
+header {
+	display: flex;
+	height: 100px;
+	width: 100%;
+}
+#message {
+	background: pink;
+	height: 25px;
+	margin : 0 auto;
+	padding: 25px;
+	text-align: center;
+	width : 450px;
+}
 .container1 {
-  background: rgba(240,180,135,1);
+  /*background: rgba(240,180,135,1);
   box-shadow: inset -1px 1px 7px rgba(0,0,0,.2), inset 1px -1px 7px rgba(0,0,0,.2), 1px 12px 5px rgba(0,0,0,.4), 4px 3px 8px rgba(0,0,0,.4), 5px 10px 10px rgba(0,0,0,.2), -5px 10px 10px rgba(0,0,0,.4);
   border-radius: 10px;
-  padding: 40px 0 0;
+  padding: 40px 0 0;*/
   position: relative;
   height: 550px;
-  margin: 10% auto;
+  margin: 30px auto;
   width: 1200px; 
 }
 .board  {
 	display : flex;
 }
-#board1-container {
-  height: 420px;
-  width: 420px;
+#board1-container, #board2-container {
+  height: 320px;
+  width: 320px;
   background: rgba(40,40,40,1)
     -webkit-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
   background: rgba(40,40,40,1)
@@ -28,44 +45,34 @@ html {
   background: rgba(40,40,40,1)
     radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
   background-size: cover;
-  position: relative;
-  position: relative;
-  left : 50px;
   overflow: hidden;
+  position: relative;	
+}
+#board1-container {
+  
+  left : 50px;
+  
 
 }
 #board2-container {
-  height: 420px;
-  width: 420px; 
-  background: rgba(40,40,40,1)
-    -webkit-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
-  background: rgba(40,40,40,1)
-    -moz-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
-  background: rgba(40,40,40,1)
-    -ms-radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
-  background: rgba(40,40,40,1)
-    radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
-  background-size: cover;
-  position: relative;
   left : 315px;
-  overflow: hidden;
 }
 
 .sqr {
 	border: 1px solid #DDD;
-	font-size: 80px;
+	font-size: 50px;
 	float : left;
-	height: 40px;
-	width : 40px;	
+	height: 30px;
+	width : 30px;	
 }
 .classButtons{
 	position : absolute;
 	height: 420px;
-	left : 470px;
+	left : 375px;
 	top : 40px;
 	width : 260px;
 }
-#buttonStart{
+#buttonStart, #buttonReplay{
 	background: rgba(40,40,40,1);
 	color : white;
 	position : relative;

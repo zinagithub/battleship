@@ -26,8 +26,7 @@ it('should changes the status of the grid when opponent attacks a missed shot', 
    const gameBoard = new board();
    expect(gameBoard.grid[1][1]).toEqual({"hit": false, "ship": null});
    gameBoard.receiveAttack(1,1)
-   expect(gameBoard.grid[1][1]).toEqual({"hit": true, "ship": null});  
-   //expect(gameBoard.grid[1][2]).toEqual({"hit": false, "ship": null});
+   expect(gameBoard.grid[1][1]).toEqual({"hit": true, "ship": null}); 
 });
 it('should changes the status of both the grid and the ship when opponent attacks a ship ', () => {
    const gameBoard = new board();

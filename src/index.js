@@ -4,8 +4,8 @@ import Player from './player/player';
 const board = require('./board/board');
 const ship = require('./ship/ships');
 
-let humainPosShips = [[[0,0]],[[0,3],[0,4]],[[4,1],[4,2],[4,3]]];
-let computerPosShips = [[[0,0]],[[0,3],[1,3]],[[4,1],[5,1],[6,1]]];
+let humainPosShips = [[[0,0]],[[9,0]],[[0,3],[0,4]],[[4,1],[4,2],[4,3]]];
+let computerPosShips = [[[0,0]],[[9,0]],[[0,3],[1,3]],[[4,1],[5,1],[6,1]]];
 
 function drawGrids(){
 	const humainGrid = document.getElementById('board1-container');
@@ -43,13 +43,13 @@ function placeGridShips(){
   
 
   
-  for (let i=0; i<computerPosShips.length; i++){
+  /*for (let i=0; i<computerPosShips.length; i++){
      let ships = computerPosShips[i];
      ships.map((elm) => {	
       let info = document.getElementById('board2'+elm[0].toString()+elm[1].toString());
       info.style.backgroundColor = "green";
 	});
-  }  
+  } */ 
 }
 
 function startBattle(){
@@ -59,7 +59,6 @@ function startBattle(){
         humainBoard.placeShip(shipx, elm);
     });
     let humain = new Player('Humain', humainBoard);
-    console.log(humainBoard);
     let computerBoard = new board();
     computerPosShips.map((elm) =>{
     let shipy = ship(elm.length);

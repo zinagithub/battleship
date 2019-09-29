@@ -1,6 +1,4 @@
-//import Player from '../player/player';
-//const board = require('../board/board');
-
+var intervalID;
 export default function Game(player1, player2){
 	this.player1 = player1;
     this.player2 = player2;
@@ -12,64 +10,67 @@ export default function Game(player1, player2){
             sqrs[i].addEventListener('click', (e) => {
               let x = e.target.id.replace('board2','').split('')[0];
               let y = e.target.id.replace('board2','').split('')[1];
-              console.log(parseInt(x,10), parseInt(y, 10));
-              //console.log(this.player2.board.grid);
               if (this.player2.board.receiveAttack(x, y)){
-                //console.log('good shot')
                 let cell = document.getElementById(e.target.id);
                 if (this.player2.board.grid[x][y].ship){
-                    
                     cell.style.backgroundColor = "red";
                 }
                 else{
                    cell.style.backgroundColor = "blue";  
                 }
+                if (this.player2.board.allShipsSunk()){
+                    console.log(this.player1.name, ' you won!')
+                    displayMsg('Humain You Won !!! ', 1);
+                    clearInterval(intervalID);
+                }
                 this.turn    = this.player2.name;
-              }
-              else {
-                console.log('some thing went wrong!')
               }
             });
            }
     }       
 
     this.computerTurn = function(){
-        let container = document.querySelector("#board1-container");
-        let cond = true;
-        let pos = [];
-        while (cond){
-            let posit = this.player2.randomPlay();
-            if (this.player2.playAIPos.indexOf(pos) === -1){
-                console.log('pos',posit);
-                let nbCell = posit.join('');
-                console.log(nbCell);
-                let cell = document.getElementById('board1'+nbCell);
-                console.log(cell);
-                if (this.player1.board.grid[posit[0]][posit[1]].ship){
-                    
-                    cell.style.backgroundColor = "red";
-                }
-                else{
-                   cell.style.backgroundColor = "blue";  
-                }
-                this.turn    = this.player1.name;
-                cond = false;
-            }
+        let posit = this.player2.randomPlay();
+        let nbCell = posit.join('');
+        let cell = document.getElementById('board1'+nbCell);
+        if (this.player1.board.grid[posit[0]][posit[1]].ship){   
+            cell.style.backgroundColor = "red";
         }
-        
-        
+        else{
+            cell.style.backgroundColor = "blue";  
+        }
+        this.turn    = this.player1.name;
     }
 
     this.startGame = function(){
-        setInterval(() => {
+        intervalID = setInterval(() => {
            if (this.turn === 'Humain'){
+             displayMsg('Humain turn ', 1);
              this.humainTurn() 
            }
            else {
+             displayMsg('Computer turn ', 2); 
              this.computerTurn();
            }         
         
         },1500);
         
     }
+}
+
+
+function displayMsg(message, turn){
+    const msg = document.getElementById('message');
+    msg.innerHTML = message;
+    let grid1 = document.querySelector("#board1-container");
+    let grid2 = document.querySelector("#board2-container");
+    if (turn == 1){
+       grid1.style.opacity = '0.5';
+       grid2.style.opacity = '1'; 
+    }else {
+        grid2.style.opacity = '0.5';
+        grid1.style.opacity = '1';
+    }
+    
+
 }

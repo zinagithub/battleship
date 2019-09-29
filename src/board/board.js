@@ -13,11 +13,9 @@ function Board() {
        })
 	}
 	this.receiveAttack = function(x, y) {
-		console.log(x ,y);
 		if (!this.grid[x][y].hit){
            this.grid[x][y].hit = true;
-           //console.log(this.grid);
-           if (this.grid[x][y].ship){
+           if (this.grid[x][y].ship != null){
               this.grid[x][y].ship.hit(x, y);
               if (this.grid[x][y].ship.isSunk()){
                 this.nbrShip -= 1;
