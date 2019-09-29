@@ -16,9 +16,9 @@ header {
 	background: pink;
 	height: 25px;
 	margin : 0 auto;
-	padding: 25px;
+	padding: 20px;
 	text-align: center;
-	width : 450px;
+	width : 400px;
 }
 .container1 {
   height: 550px;
@@ -30,9 +30,7 @@ header {
 	display : flex;
 }
 
-.board1, .board2 {	
-  height: 320px;
-  width: 320px;
+.board1, .board2 {
   background: rgba(40,40,40,1) 
     radial-gradient(center, rgba(40,80,60,1), rgba(0,20,20,.6));
   background: rgba(40,40,40,1)
@@ -45,6 +43,8 @@ header {
   background-size: cover;
   overflow: hidden;
   position: relative;	
+  height: 320px;
+  width: 320px;	
 }
 
 .board1 {	
@@ -64,17 +64,17 @@ header {
 }
 .classButtons{
 	height: 420px;
-	position : absolute;
 	left : 375px;
+	position : absolute;
 	top : 40px;
 	width : 260px;
 }
 .start, .replay{
 	background: rgba(40,40,40,1);
 	color : white;
+	left : 30px;
 	position : relative;
 	height: 50px;
-	left : 30px;
 	margin : 0 auto;
 	width :200px;
 }
