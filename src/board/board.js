@@ -1,7 +1,4 @@
-const ship = require('../ship/ships');
-
-function Board() {
-	//this.grid = Array(10).fill().map(()=>Array(10).fill({ship: null, hit: false}));
+export default function Board() {
 	this.grid = Array.from(Array(10), () => (
       Array.from(Array(10), () => ({ hit: false, ship: null }))));
 	this.nbrShip = 0;
@@ -32,4 +29,3 @@ function Board() {
 		return false;
 	}
 }
-module.exports = Board;

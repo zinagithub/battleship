@@ -1,4 +1,4 @@
-const Ship = (length) => {
+export const Ship = (length) => {
   let health = length;
   let positions = [];
   let getPositions = () => positions;
@@ -33,4 +33,4 @@ const Ship = (length) => {
 
   return {health, hit, isSunk, getPositions, setPositions,positions}
 }
-module.exports = Ship;
+//module.exports = Ship;
