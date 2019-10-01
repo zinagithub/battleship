@@ -42,6 +42,8 @@ const placeGridShips = () => {
 
 export const startBattle = () => {
     tide();
+    const startEvent = document.getElementById('buttonStart');
+    startEvent.removeEventListener('click',startBattle);
     let humainBoard = new Board();
     humainPosShips.map((elm) =>{
     let shipx = Ship(elm.length);
@@ -57,11 +59,9 @@ export const startBattle = () => {
 
     let newGame  = new Game(humain, computer);
     newGame.startGame();
-    
-
 }
 
-function tide(){
+const tide = () =>{
 	const cells = document.getElementsByClassName('sqr');
     
     if (cells.length > 0){

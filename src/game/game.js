@@ -28,6 +28,8 @@ export default function Game(player1, player2){
                     displayMsg('Humain You Won !!! ', 1);
                     this.hit = true;
                     clearInterval(intervalID);
+                    const startEvent = document.getElementById('buttonStart');
+                    startEvent.addEventListener('click',refrechGame);
                 }  
               }
               }
@@ -85,4 +87,8 @@ const displayMsg = (message, turn) => {
         grid2.style.opacity = '0.5';
         grid1.style.opacity = '1';
     }
+}
+
+const refrechGame = () => {
+  alert('please reload the game')
 }

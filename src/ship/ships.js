@@ -33,4 +33,4 @@ export const Ship = (length) => {
 
   return {health, hit, isSunk, getPositions, setPositions,positions}
 }
-//module.exports = Ship;
+
