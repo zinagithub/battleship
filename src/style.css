@@ -1,3 +1,77 @@
-body{
-	background: red
+body,
+html {	
+  height: 100%;	
+  width: 100%; 
+}
+.container {
+	margin : 0 auto;
+	width: 80%;
+}
+header {
+	display: flex;
+	height: 100px;
+	width: 100%;
+}
+.msgClass {
+	background: pink;
+	height: 50px;
+	margin : 0 auto;
+	text-align: center;
+	width : 450px;
+}
+.container1 {
+  height: 550px;
+  margin: 30px auto;	
+  position: relative; 
+  width: 1200px; 
+}
+.board  {
+	display : flex;
+}
+
+.board1, .board2 {
+  background: rgb(40,80,60);
+  background: rgba(40,80,60,1);
+  background-size: cover;
+  height: 320px;
+  overflow: hidden;
+  position: relative;	
+  width: 320px;	
+}
+
+.board1 {	
+  left : 50px;
+}
+
+.board2 {	
+  left : 315px;
+}
+
+.sqr {
+	float : left;
+	font-size: 50px;
+	height: 30px;
+	width : 30px;	
+}
+.sqr {
+	border: 1px solid #DDD;
+}
+.classButtons{
+	height: 420px;
+	left : 375px;
+	position : absolute;
+	top : 40px;
+	width : 260px;
+}
+.start {
+	background: rgb(40,80,60);
+    background: rgba(40,80,60,1);
+	color : white;
+	height: 50px;
+	left : 30px;
+	margin : 0 auto;
+	opacity: 1;
+	position : relative;
+	top : 50px;	
+	width :200px;
 }
