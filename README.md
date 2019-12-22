@@ -15,6 +15,7 @@
    git clone https://github.com/zinagithub/battleship.git
 
 $ npm run build
+
 $ npm start
 
 
