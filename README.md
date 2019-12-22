@@ -2,6 +2,7 @@
  The Odin Project - JavaScript project: Battleship
  
  Assignment: https://www.theodinproject.com/courses/javascript/lessons/battleship
+ 
  Authors: Talaa Zina 
 
 # Prerequisities
