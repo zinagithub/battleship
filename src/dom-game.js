@@ -4,8 +4,22 @@ import Board from './board/board';
 import {Ship} from './ship/ships';
  
 
-let humainPosShips = [[[0,0]],[[9,0]],[[0,3],[0,4]],[[4,1],[4,2],[4,3]]];
-let computerPosShips = [[[0,0]],[[9,0]],[[0,3],[1,3]],[[4,1],[5,1],[6,1]]];
+let humainPosShips =  [
+                         [[0,0]],
+                         [[9,0]],
+                         [[0,3],[1,3]],
+                         [[4,1],[5,1],[6,1]],
+                         [[8,3],[8,4],[8,5],[8,6]],
+                         [[1,7],[2,7],[3,7],[4,7],[5,7]]
+                        ];
+let computerPosShips = [
+                         [[0,0]],
+                         [[9,0]],
+                         [[0,3],[1,3]],
+                         [[4,1],[5,1],[6,1]],
+                         [[8,3],[8,4],[8,5],[8,6]],
+                         [[1,7],[2,7],[3,7],[4,7],[5,7]]
+                        ];
 
 
 const drawGrids = () => {
@@ -38,6 +52,14 @@ const placeGridShips = () => {
       info.style.backgroundColor = "green";
 	});
   }	
+
+  /*for (let i=0; i<computerPosShips.length; i++){
+     let ships = computerPosShips[i];
+     ships.map((elm) => { 
+      let info = document.getElementById('board2'+elm[0].toString()+elm[1].toString());
+      info.style.backgroundColor = "green";
+  });
+  } */
 }
 
 export const startBattle = () => {
