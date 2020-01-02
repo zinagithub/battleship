@@ -28,4 +28,5 @@ $ npm start
 	npm i -D jest
 	
 # Live version :
-    https://zinagithub.github.io/battleship/
+
+    https://zinagithub.github.io/battleship/dist
