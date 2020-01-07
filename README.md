@@ -26,3 +26,6 @@ $ npm start
 	npm install eslint --save-dev
 	npm install -D babel-loader @babel/core @babel/preset-env webpack
 	npm i -D jest
+	
+# Live version : 
+  https://zinagithub.github.io/battleship/dist
