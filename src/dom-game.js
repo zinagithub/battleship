@@ -53,13 +53,13 @@ const placeGridShips = () => {
 	});
   }	
 
-  for (let i=0; i<computerPosShips.length; i++){
+  /*for (let i=0; i<computerPosShips.length; i++){
      let ships = computerPosShips[i];
      ships.map((elm) => { 
       let info = document.getElementById('board2'+elm[0].toString()+elm[1].toString());
       info.style.backgroundColor = "green";
   });
-  } 
+  } */
 }
 
 export const startBattle = () => {
