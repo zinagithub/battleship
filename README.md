@@ -1,6 +1,7 @@
 # battleship
 An online Battleship app that simulates the function of the original Battleship board game. Created from the scratch with TDD Aproach using Jest Framwork. Allowing users to play against a computer until your opponent's ships are all sunk.
 Assignment: https://www.theodinproject.com/courses/javascript/lessons/battleship
+
 Authors: Talaa Zina 
 
 ## Screenshot
